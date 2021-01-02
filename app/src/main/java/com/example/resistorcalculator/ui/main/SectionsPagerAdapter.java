@@ -8,9 +8,6 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
-import com.example.resistorcalculator.FragmentBAND4;
-import com.example.resistorcalculator.FragmentBAND5;
-import com.example.resistorcalculator.FragmentBAND6;
 import com.example.resistorcalculator.R;
 
 

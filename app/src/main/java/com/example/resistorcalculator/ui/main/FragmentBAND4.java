@@ -1,19 +1,15 @@
-package com.example.resistorcalculator;
+package com.example.resistorcalculator.ui.main;
 
-import androidx.fragment.app.Fragment;
+import android.os.Bundle;
 import android.view.LayoutInflater;
-import android.widget.ArrayAdapter;
 import android.view.View;
 import android.view.ViewGroup;
-import android.os.Bundle;
 import android.widget.ListView;
-
-import android.widget.SimpleAdapter;
 import android.widget.TextView;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
+import androidx.fragment.app.Fragment;
+
+import com.example.resistorcalculator.R;
 
 public class FragmentBAND4 extends Fragment {
 

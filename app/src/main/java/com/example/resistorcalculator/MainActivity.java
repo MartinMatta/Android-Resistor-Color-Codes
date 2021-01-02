@@ -18,7 +18,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.example.resistorcalculator.ui.main.SectionsPagerAdapter;
+import com.example.resistorcalculator.ui.main.*;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,12 +28,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
-        CoordinatorLayout linearLayout = findViewById(R.id.layout);
-        DrawResistor myView = new DrawResistor(this);
-        linearLayout.addView(myView);
-
+        
         SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager());
 
         ViewPager viewPager = findViewById(R.id.view_pager);
