@@ -13,9 +13,9 @@
         android:layout_height="wrap_content"
         android:paddingTop="16dp"
         android:scaleType="center"
-        android:src="@drawable/img1"
         android:scaleX="0.8"
-        android:scaleY="0.8"/>
+        android:scaleY="0.8"
+        android:src="@drawable/resistor" />
 
     <TextView
         android:id="@+id/textView"

@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.widget.ListView;
 
 import android.widget.SimpleAdapter;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -17,6 +18,8 @@ import java.util.List;
 public class FragmentBAND4 extends Fragment {
 
     ListView list;
+    TextView result;
+
     private static String[] BAND = {
             "value 1","value 2",
             "multiplier","tolerance"};
