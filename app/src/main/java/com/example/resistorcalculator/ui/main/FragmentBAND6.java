@@ -19,8 +19,6 @@ public class FragmentBAND6 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view =  inflater.inflate(R.layout.band6_layout, container, false);
 
-        //list = (ListView)view.findViewById(R.id.listView6);
-        //list.setAdapter(new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_1, BAND));
 
         return view;
     }
