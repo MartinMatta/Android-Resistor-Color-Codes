@@ -3,4 +3,12 @@
     <string name="tab_text_1">BAND 4</string>
     <string name="tab_text_2">BAND 5</string>
     <string name="tab_text_3">BAND 6</string>
+
+
+    <string name="resistor_Value">value</string>
+    <string name="resistor_Multiplier">Multiplier</string>
+    <string name="resistor_Tolerance">Tolerance</string>
+    <string name="resistor_Temperature_Coefficient">Temperature coefficient</string>
+
+    <string name="image_description">Resistor image</string>
 </resources>

@@ -10,11 +10,13 @@
         android:id="@+id/resistorBAND6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:contentDescription="@string/image_description"
         android:paddingTop="16dp"
         android:scaleType="center"
         android:src="@drawable/resistor"
         android:scaleX="0.8"
-        android:scaleY="0.8"/>
+        android:scaleY="0.8"
+        />
 
     <TextView
         android:id="@+id/textView"
@@ -33,7 +35,7 @@
         android:layout_height="wrap_content"
         android:scaleX="0.8"
         android:scaleY="0.8"
-        android:text="Value" />
+        android:text="@string/resistor_Value" />
 
     <Button
         android:id="@+id/button6"
@@ -41,7 +43,7 @@
         android:layout_height="wrap_content"
         android:scaleX="0.8"
         android:scaleY="0.8"
-        android:text="Value" />
+        android:text="@string/resistor_Value" />
 
     <Button
         android:id="@+id/button12"
@@ -49,7 +51,7 @@
         android:layout_height="wrap_content"
         android:scaleX="0.8"
         android:scaleY="0.8"
-        android:text="Value" />
+        android:text="@string/resistor_Value" />
 
     <Button
         android:id="@+id/button13"
@@ -57,7 +59,7 @@
         android:layout_height="wrap_content"
         android:scaleX="0.8"
         android:scaleY="0.8"
-        android:text="multiplier" />
+        android:text="@string/resistor_Multiplier" />
 
     <Button
         android:id="@+id/button14"
@@ -65,7 +67,7 @@
         android:layout_height="wrap_content"
         android:scaleX="0.8"
         android:scaleY="0.8"
-        android:text="tolerance" />
+        android:text="@string/resistor_Tolerance" />
 
     <Button
         android:id="@+id/button15"
@@ -73,7 +75,7 @@
         android:layout_height="wrap_content"
         android:scaleX="0.8"
         android:scaleY="0.8"
-        android:text="temperature coefficient" />
+        android:text="@string/resistor_Temperature_Coefficient" />
 
 
 </LinearLayout>

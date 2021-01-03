@@ -8,9 +8,10 @@
 
 
     <ImageView
-        android:id="@+id/resistorBAND6"
+        android:id="@+id/resistorBAND4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:contentDescription="@string/image_description"
         android:paddingTop="16dp"
         android:scaleType="center"
         android:scaleX="0.8"
@@ -34,7 +35,7 @@
         android:layout_height="wrap_content"
         android:scaleX="0.8"
         android:scaleY="0.8"
-        android:text="value" />
+        android:text="@string/resistor_Value" />
 
     <Button
         android:id="@+id/button2"
@@ -42,7 +43,7 @@
         android:layout_height="wrap_content"
         android:scaleX="0.8"
         android:scaleY="0.8"
-        android:text="value" />
+        android:text="@string/resistor_Value" />
 
     <Button
         android:id="@+id/button3"
@@ -50,7 +51,7 @@
         android:layout_height="wrap_content"
         android:scaleX="0.8"
         android:scaleY="0.8"
-        android:text="Multiplier" />
+        android:text="@string/resistor_Multiplier" />
 
     <Button
         android:id="@+id/button4"
@@ -58,7 +59,7 @@
         android:layout_height="wrap_content"
         android:scaleX="0.8"
         android:scaleY="0.8"
-        android:text="Tolerance" />
+        android:text="@string/resistor_Tolerance" />
 
 
 </LinearLayout>
