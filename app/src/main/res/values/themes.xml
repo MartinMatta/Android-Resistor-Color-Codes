@@ -27,4 +27,8 @@
         <item name="textAllCaps">true</item>
     </style>
 
+    <style name="Button" parent="ThemeOverlay.AppCompat">
+        <item name="colorAccent">@color/purple_500</item>
+    </style>
+
 </resources>

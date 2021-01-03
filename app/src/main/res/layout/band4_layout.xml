@@ -33,6 +33,7 @@
         android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:theme="@style/Button"
         android:scaleX="0.8"
         android:scaleY="0.8"
         android:text="@string/resistor_Value" />
@@ -41,6 +42,7 @@
         android:id="@+id/button2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:theme="@style/Button"
         android:scaleX="0.8"
         android:scaleY="0.8"
         android:text="@string/resistor_Value" />
@@ -49,6 +51,7 @@
         android:id="@+id/button3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:theme="@style/Button"
         android:scaleX="0.8"
         android:scaleY="0.8"
         android:text="@string/resistor_Multiplier" />
@@ -57,6 +60,7 @@
         android:id="@+id/button4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:theme="@style/Button"
         android:scaleX="0.8"
         android:scaleY="0.8"
         android:text="@string/resistor_Tolerance" />

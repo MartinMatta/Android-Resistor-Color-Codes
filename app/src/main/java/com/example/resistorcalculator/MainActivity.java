@@ -3,15 +3,12 @@ package com.example.resistorcalculator;
 import android.content.DialogInterface;
 import android.os.Bundle;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.tabs.TabLayout;
 
 import androidx.appcompat.app.AlertDialog;
-import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.viewpager.widget.ViewPager;
 import androidx.appcompat.app.AppCompatActivity;
-import com.google.android.material.tabs.TabLayout;
+
 
 import android.os.Handler;
 import android.view.Menu;
@@ -43,14 +40,14 @@ public class MainActivity extends AppCompatActivity {
         if (doubleBackToExitPressedOnce) {
             new AlertDialog.Builder(MainActivity.this)
                     .setIcon(R.drawable.ic_baseline_exit_to_app_24)
-                    .setTitle("Quit the application")
-                    .setMessage("Are you sure you want to quit the application?")
+                    .setTitle(R.string.exit_title)
+                    .setMessage(R.string.exit_dialog)
                     .setCancelable(false)
-                    .setNegativeButton("cancel", new DialogInterface.OnClickListener() {
+                    .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) { }
                     })
-                    .setPositiveButton("ok", new DialogInterface.OnClickListener() {
+                    .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             finish();
