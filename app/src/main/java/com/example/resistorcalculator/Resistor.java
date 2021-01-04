@@ -9,25 +9,13 @@ import android.graphics.Paint;
 import android.graphics.RectF;
 import android.graphics.drawable.BitmapDrawable;
 
-public class Resistor extends Utils {
+import androidx.fragment.app.Fragment;
 
-    private int loadResistorImage() {
-        int path = R.drawable.resistor;
-        return path;
+public class Resistor extends Fragment {
+
+    public void getColor() {
+
     }
 
-    public void drawBand(ImageView image, int band, int colorCode) {
-        int [] rgb = hexToRgb(colorCode);
 
-        Paint paint = new Paint();
-        paint.setStyle(Paint.Style.STROKE);
-        paint.setStrokeWidth(10f);
-        paint.setAntiAlias(true);
-        paint.setColor(Color.RED);
-
-        Canvas canvas = new Canvas();
-        canvas.drawLine(0, 0, 80, 80, paint);
-
-        image.draw(canvas);
-    }
 }

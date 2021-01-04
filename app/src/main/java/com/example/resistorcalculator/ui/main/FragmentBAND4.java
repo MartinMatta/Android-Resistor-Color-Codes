@@ -1,9 +1,11 @@
 package com.example.resistorcalculator.ui.main;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -15,47 +17,50 @@ import androidx.fragment.app.Fragment;
 import com.example.resistorcalculator.Resistor;
 import com.example.resistorcalculator.R;
 
-import org.xdty.preference.colorpicker.ColorPickerDialog;
-import org.xdty.preference.colorpicker.ColorPickerSwatch;
 
-public class FragmentBAND4 extends Fragment {
+public class FragmentBAND4 extends Resistor {
 
-    ListView list;
-    TextView result;
+    Button btn_value1;
+    Button btn_value2;
+    Button btn_multiplier;
+    Button btn_tolerance;
+
     ImageView imageView;
-
-    private int mSelectedColor;
-
-    private static String[] BAND = {
-            "value 1","value 2",
-            "multiplier","tolerance"};
-
+    TextView textView;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.band4_layout, container, false);
 
-        imageView = (ImageView) view.findViewById(R.id.resistorBAND4);
+        textView = (TextView)view.findViewById(R.id.textView1);
 
-        mSelectedColor = ContextCompat.getColor(getContext(), R.color.flamingo);
-        int[] mColors = getResources().getIntArray(R.array.default_rainbow);
+        btn_value1 = (Button)view.findViewById(R.id.btn_band4_value1);
+        btn_value2 = (Button)view.findViewById(R.id.btn_band4_value2);
+        btn_multiplier = (Button)view.findViewById(R.id.btn_band4_multiplier);
+        btn_tolerance = (Button)view.findViewById(R.id.btn_band4_tolerance);
 
-        ColorPickerDialog dialog = ColorPickerDialog.newInstance(R.string.color_picker_default_title,
-                mColors,
-                mSelectedColor,
-                5, // Number of columns
-                ColorPickerDialog.SIZE_SMALL,
-                true
-        );
-
-        dialog.setOnColorSelectedListener(new ColorPickerSwatch.OnColorSelectedListener() {
-
+        btn_value1.setOnClickListener(new View.OnClickListener(){
             @Override
-            public void onColorSelected(int color) {
-                mSelectedColor = color;
-                Toast.makeText(getContext(), mSelectedColor, Toast.LENGTH_SHORT);
+            public void onClick(View view) {
             }
+        });
 
+        btn_value2.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+            }
+        });
+
+        btn_multiplier.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+            }
+        });
+
+        btn_tolerance.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+            }
         });
 
         return view;

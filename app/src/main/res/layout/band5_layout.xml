@@ -19,7 +19,7 @@
         android:scaleY="0.8"/>
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -30,7 +30,7 @@
         android:text="330Ω" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/btn_band5_value1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/Button"
@@ -39,7 +39,7 @@
         android:text="@string/resistor_Value" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/btn_band5_value2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/Button"
@@ -48,7 +48,7 @@
         android:text="@string/resistor_Value" />
 
     <Button
-        android:id="@+id/button9"
+        android:id="@+id/btn_band5_value3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/Button"
@@ -57,7 +57,7 @@
         android:text="@string/resistor_Value" />
 
     <Button
-        android:id="@+id/button10"
+        android:id="@+id/btn_band5_multiplier"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/Button"
@@ -66,7 +66,7 @@
         android:text="@string/resistor_Multiplier" />
 
     <Button
-        android:id="@+id/button11"
+        android:id="@+id/btn_band5_tolerance"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/Button"
