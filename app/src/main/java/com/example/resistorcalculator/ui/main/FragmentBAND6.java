@@ -26,6 +26,7 @@ public class FragmentBAND6 extends Resistor {
     ImageView imageView;
     TextView textView;
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view =  inflater.inflate(R.layout.band6_layout, container, false);
@@ -38,6 +39,8 @@ public class FragmentBAND6 extends Resistor {
         btn_multiplier = (Button)view.findViewById(R.id.btn_band6_multiplier);
         btn_tolerance = (Button)view.findViewById(R.id.btn_band6_tolerance);
         btn_coefficient = (Button)view.findViewById(R.id.btn_band6_coefficient);
+
+        loadView(imageView, textView);
 
         btn_value1.setOnClickListener(new View.OnClickListener(){
             @Override

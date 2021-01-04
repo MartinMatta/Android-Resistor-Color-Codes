@@ -39,6 +39,8 @@ public class FragmentBAND4 extends Resistor {
         btn_multiplier = (Button)view.findViewById(R.id.btn_band4_multiplier);
         btn_tolerance = (Button)view.findViewById(R.id.btn_band4_tolerance);
 
+        loadView(imageView, textView);
+
         btn_value1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {

@@ -25,6 +25,7 @@ public class FragmentBAND5 extends Resistor {
     ImageView imageView;
     TextView textView;
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.band5_layout, container, false);
@@ -37,15 +38,19 @@ public class FragmentBAND5 extends Resistor {
         btn_multiplier = (Button)view.findViewById(R.id.btn_band5_multiplier);
         btn_tolerance = (Button)view.findViewById(R.id.btn_band5_tolerance);
 
+        loadView(imageView, textView);
+
         btn_value1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
+                draw();
             }
         });
 
         btn_value2.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
+                draw();
             }
         });
 
