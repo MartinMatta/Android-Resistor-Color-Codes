@@ -11,8 +11,6 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.core.content.ContextCompat;
-import androidx.fragment.app.Fragment;
 
 import com.example.resistorcalculator.Resistor;
 import com.example.resistorcalculator.R;
@@ -39,11 +37,12 @@ public class FragmentBAND4 extends Resistor {
         btn_multiplier = (Button)view.findViewById(R.id.btn_band4_multiplier);
         btn_tolerance = (Button)view.findViewById(R.id.btn_band4_tolerance);
 
-        loadView(imageView, textView);
+        loadViewParameter(imageView, textView, getActivity(), 4);
 
         btn_value1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
+                putResult(4, 2);
             }
         });
 

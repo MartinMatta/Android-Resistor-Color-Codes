@@ -6,10 +6,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.ListView;
+
 import android.widget.TextView;
 
-import androidx.fragment.app.Fragment;
 
 import com.example.resistorcalculator.R;
 import com.example.resistorcalculator.Resistor;
@@ -40,11 +39,12 @@ public class FragmentBAND6 extends Resistor {
         btn_tolerance = (Button)view.findViewById(R.id.btn_band6_tolerance);
         btn_coefficient = (Button)view.findViewById(R.id.btn_band6_coefficient);
 
-        loadView(imageView, textView);
+        loadViewParameter(imageView, textView, getActivity(), 6);
 
         btn_value1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
+                putResult(6, 10, 15);
             }
         });
 
