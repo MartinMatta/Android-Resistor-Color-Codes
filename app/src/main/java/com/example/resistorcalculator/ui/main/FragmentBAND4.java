@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+import com.example.resistorcalculator.Colors;
 import com.example.resistorcalculator.Resistor;
 import com.example.resistorcalculator.R;
 
@@ -25,6 +26,8 @@ public class FragmentBAND4 extends Resistor {
 
     ImageView imageView;
     TextView textView;
+
+    Colors c = new Colors();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -42,7 +45,7 @@ public class FragmentBAND4 extends Resistor {
         btn_value1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                putResult(4, 2);
+                putResult(4, c.toleranceBANDValue[5]);
             }
         });
 

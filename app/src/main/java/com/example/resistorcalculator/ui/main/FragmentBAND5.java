@@ -41,7 +41,7 @@ public class FragmentBAND5 extends Resistor {
         btn_value1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                putResult(5, 5);
+                putResult(5, 5f);
             }
         });
 

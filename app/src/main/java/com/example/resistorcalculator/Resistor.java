@@ -37,7 +37,7 @@ public class Resistor extends Fragment {
 
     @SuppressLint("SetTextI18n")
     public void putResult(int value,
-                          int tolerance,
+                          float tolerance,
                           int coefficient) {
 
             textView.setText(
@@ -46,7 +46,7 @@ public class Resistor extends Fragment {
     }
 
     @SuppressLint("SetTextI18n")
-    public void putResult(int value, int tolerance) {
+    public void putResult(int value, float tolerance) {
         textView.setText(value + "Ω  " + "±" + tolerance + "%");
     }
 

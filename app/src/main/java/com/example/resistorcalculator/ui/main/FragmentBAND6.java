@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 
+import com.example.resistorcalculator.Colors;
 import com.example.resistorcalculator.R;
 import com.example.resistorcalculator.Resistor;
 
@@ -25,6 +26,7 @@ public class FragmentBAND6 extends Resistor {
     ImageView imageView;
     TextView textView;
 
+    Colors c = new Colors();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -44,7 +46,7 @@ public class FragmentBAND6 extends Resistor {
         btn_value1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                putResult(6, 10, 15);
+                putResult(6, 10f, c.coefficientBANDValue[2]);
             }
         });
 
