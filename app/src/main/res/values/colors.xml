@@ -8,4 +8,17 @@
     <color name="gray">#FFC1C1C1</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+
+    <color name="valueBlack">#000000</color>
+    <color name="valueBrovn">#654321</color>
+    <color name="valueRed">#FF0000</color>
+    <color name="valueOrange">#FF6600</color>
+    <color name="valueYellow">#FFFF00</color>
+    <color name="valueGreen">#00FF00</color>
+    <color name="valueViolet">#7F00FF</color>
+    <color name="valueGray">#808080</color>
+    <color name="valueWhite">#FFFFFF</color>
+    <color name="valueGold">#D4AF37</color>
+    <color name="valueSilver">#BEC2CB</color>
 </resources>
