@@ -71,7 +71,7 @@ public class Resistor extends Fragment {
                     }
                 })
                 .setTitle("Select color")
-                .show();;
+                .show();
 
 
         return _color[0];

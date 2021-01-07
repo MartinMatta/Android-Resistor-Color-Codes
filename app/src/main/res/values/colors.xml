@@ -16,6 +16,7 @@
     <color name="valueOrange">#FF6600</color>
     <color name="valueYellow">#FFFF00</color>
     <color name="valueGreen">#00FF00</color>
+    <color name="valueBlue">#2196F3</color>
     <color name="valueViolet">#7F00FF</color>
     <color name="valueGray">#808080</color>
     <color name="valueWhite">#FFFFFF</color>

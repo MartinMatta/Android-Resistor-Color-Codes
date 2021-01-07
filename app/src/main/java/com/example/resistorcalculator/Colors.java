@@ -32,11 +32,35 @@ public class Colors {
             "blue", "purple"
     };
 
-    String[] valueBANDColor = {""};
-    String[] multiplierBANDColor = {""};
-    String[] toleranceBANDColor = {""};
-    String[] coefficientBANDColor = {""};
+    int[] valueBANDColor = {
+            R.color.valueBlack, R.color.valueBrovn,
+            R.color.valueRed, R.color.valueOrange,
+            R.color.valueYellow, R.color.valueGreen,
+            R.color.valueBlue, R.color.valueViolet,
+            R.color.valueGray, R.color.valueWhite
+    };
 
+    int[] multiplierBANDColor = {
+            R.color.valueBlack, R.color.valueBrovn,
+            R.color.valueRed, R.color.valueOrange,
+            R.color.valueYellow, R.color.valueGreen,
+            R.color.valueBlue, R.color.valueViolet,
+            R.color.valueGray, R.color.valueWhite,
+            R.color.valueGold, R.color.valueSilver
+    };
+
+    int[] toleranceBANDColor = {
+            R.color.valueBlack, R.color.valueBrovn,
+            R.color.valueGreen, R.color.valueBlue,
+            R.color.valueViolet, R.color.valueGray,
+            R.color.valueGold, R.color.valueSilver
+    };
+
+    int[] coefficientBANDColor = {
+            R.color.valueGray, R.color.valueBrovn,
+            R.color.valueRed, R.color.valueOrange,
+            R.color.valueBlue, R.color.valueViolet,
+    };
 
     public Float[] multiplierBANDValue = {
             1f, 10f,
