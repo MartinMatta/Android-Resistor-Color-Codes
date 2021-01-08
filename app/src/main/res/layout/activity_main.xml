@@ -32,6 +32,8 @@
             app:tabBackground="@color/purple_500"
             app:tabSelectedTextColor="@color/gray"
             app:tabTextColor="@color/white"/>
+
+
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.viewpager.widget.ViewPager
