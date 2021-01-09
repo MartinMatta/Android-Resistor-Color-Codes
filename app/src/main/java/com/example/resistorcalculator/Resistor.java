@@ -20,6 +20,8 @@ import petrov.kristiyan.colorpicker.ColorPicker;
 
 public class Resistor extends Fragment {
 
+    Colors c = new Colors();
+
     ImageView imageView;
     TextView textView;
     FragmentActivity fa;
@@ -57,22 +59,44 @@ public class Resistor extends Fragment {
     public int choseColor(int band) {
         int[] _color = {0};
 
-        new ColorPicker(fa)
-                .setOnFastChooseColorListener(new ColorPicker.OnFastChooseColorListener() {
-                    @Override
-                    public void setOnFastChooseColorListener(int position, int color) {
-                        _color[0] = position;
-                        //bandColor[band - 1] = position;
-                    }
+        ColorPicker colorPicker = new ColorPicker(fa);
 
-                    @Override
-                    public void onCancel() {
+        colorPicker.setTitle("Select color");
 
-                    }
-                })
-                .setTitle("Select color")
-                .show();
+        switch (band) {
+            case 1:
+                colorPicker.setColors(c.valueBANDColor);
+                break;
+            case 2:
+                colorPicker.setColors(c.valueBANDColor);
+                break;
+            case 3:
+                colorPicker.setColors(c.valueBANDColor);
+                break;
+            case 4:
+                colorPicker.setColors(c.valueBANDColor);
+                break;
+            case 5:
+                colorPicker.setColors(c.valueBANDColor);
+                break;
+            case 6:
+                colorPicker.setColors(c.coefficientBANDColor);
+                break;
 
+        }
+
+        colorPicker.setOnFastChooseColorListener(new ColorPicker.OnFastChooseColorListener() {
+            @Override
+            public void setOnFastChooseColorListener(int position, int color) {
+                _color[0] = position;
+                //bandColor[band - 1] = position;
+            }
+
+            @Override
+            public void onCancel() {
+
+            }
+        }).show();
 
         return _color[0];
     }
