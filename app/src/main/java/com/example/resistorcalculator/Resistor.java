@@ -61,7 +61,9 @@ public class Resistor extends Fragment {
 
         ColorPicker colorPicker = new ColorPicker(fa);
 
-        colorPicker.setTitle("Select color");
+        colorPicker.setTitle(getString(
+                R.string.color_picker_title
+        ));
 
         switch (band) {
             case 1:
