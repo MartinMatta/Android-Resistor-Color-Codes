@@ -2,7 +2,7 @@ package com.example.resistorcalculator;
 
 public class Colors {
 
-    String[] valueColorNames = {
+    public String[] valueColorNames = {
             "black", "brown",
             "red", "orange",
             "yellow", "green",
@@ -10,7 +10,7 @@ public class Colors {
             "gray", "white"
     };
 
-    String[] multiplierColorNames = {
+    public String[] multiplierColorNames = {
             "black", "brown",
             "red", "orange",
             "yellow", "green",
@@ -19,47 +19,48 @@ public class Colors {
             "gold", "silver"
     };
 
-    String[] toleranceColorNames = {
-            "black", "brown",
+    public String[] toleranceColorNames = {
+            "brown", "red",
             "green", "blue",
             "purple", "gray",
             "gold", "silver"
     };
 
-    String[] coefficientColorNames = {
+    public String[] coefficientColorNames = {
             "gray", "brown",
             "red", "orange",
             "blue", "purple"
     };
 
-    int[] valueBANDColor = {
-            R.color.valueBlack, R.color.valueBrovn,
-            R.color.valueRed, R.color.valueOrange,
-            R.color.valueYellow, R.color.valueGreen,
-            R.color.valueBlue, R.color.valueViolet,
-            R.color.valueGray, R.color.valueWhite
+    public int[] valueBANDColor = {
+            0x000000, 0x91672C,
+            0xFF0000, 0xFF6600,
+            0xFFFF00, 0x00FF00,
+            0x2196F3, 0x7F00FF,
+            0x808080, 0xFFFFFF
     };
 
-    int[] multiplierBANDColor = {
-            R.color.valueBlack, R.color.valueBrovn,
-            R.color.valueRed, R.color.valueOrange,
-            R.color.valueYellow, R.color.valueGreen,
-            R.color.valueBlue, R.color.valueViolet,
-            R.color.valueGray, R.color.valueWhite,
-            R.color.valueGold, R.color.valueSilver
+
+    public int[] multiplierBANDColor = {
+            0x000000, 0x91672C,
+            0xFF0000, 0xFF6600,
+            0xFFFF00, 0x00FF00,
+            0x2196F3, 0x7F00FF,
+            0x808080, 0xFFFFFF,
+            0xD4AF37, 0xBEC2CB
     };
 
-    int[] toleranceBANDColor = {
-            R.color.valueBlack, R.color.valueBrovn,
-            R.color.valueGreen, R.color.valueBlue,
-            R.color.valueViolet, R.color.valueGray,
-            R.color.valueGold, R.color.valueSilver
+    public int[] toleranceBANDColor = {
+            0x91672C, 0xFF0000,
+            0x00FF00, 0x2196F3,
+            0x7F00FF, 0x808080,
+            0xD4AF37, 0xBEC2CB
     };
 
-    int[] coefficientBANDColor = {
-            R.color.valueGray, R.color.valueBrovn,
-            R.color.valueRed, R.color.valueOrange,
-            R.color.valueBlue, R.color.valueViolet,
+    public int[] coefficientBANDColor = {
+            0x808080, 0x654321,
+            0xFF0000, 0xFF6600,
+            0x2196F3, 0x7F00FF,
     };
 
     public Float[] multiplierBANDValue = {
