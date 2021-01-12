@@ -56,6 +56,35 @@ public class Resistor extends Fragment {
         textView.setText(value + "Ω  " + "±" + tolerance + "%");
     }
 
+    private void setButtonText(Button button, int band, int position) {
+        String text;
+
+        switch (band) {
+            case 1:
+                text = c.valueColorNames[position];
+                break;
+            case 2:
+                text = c.valueColorNames[position];
+                break;
+            case 3:
+                text = c.valueColorNames[position];
+                break;
+            case 4:
+                text = c.multiplierColorNames[position];
+                break;
+            case 5:
+                text = c.toleranceColorNames[position];
+                break;
+            case 6:
+                text = c.coefficientColorNames[position];
+                break;
+
+            default:
+                throw new IllegalStateException("Unexpected value: " + band);
+        }
+        button.setText(text);
+    }
+
 
     public void draw() { //ImageView imageView, int band
         //textView.setText("zobzari sa vysledok");
@@ -108,33 +137,7 @@ public class Resistor extends Fragment {
             public void setOnFastChooseColorListener(int position, int color) {
                 _color[0] = position;
 
-                String text;
-
-                switch (band) {
-                    case 1:
-                        text = c.valueColorNames[position];
-                        break;
-                    case 2:
-                        text = c.valueColorNames[position];
-                        break;
-                    case 3:
-                        text = c.valueColorNames[position];
-                        break;
-                    case 4:
-                        text = c.multiplierColorNames[position];
-                        break;
-                    case 5:
-                        text = c.toleranceColorNames[position];
-                        break;
-                    case 6:
-                        text = c.coefficientColorNames[position];
-                        break;
-
-                    default:
-                        throw new IllegalStateException("Unexpected value: " + band);
-                }
-                //bandColor[band - 1] = position;
-                button.setText(text);
+                setButtonText(button, band, position);
             }
 
             @Override
