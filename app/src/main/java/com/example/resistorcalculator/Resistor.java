@@ -61,22 +61,22 @@ public class Resistor extends Fragment {
 
         switch (band) {
             case 1:
-                text = c.valueColorNames[position];
+                text = Colors.valueColorNames[position];
                 break;
             case 2:
-                text = c.valueColorNames[position];
+                text = Colors.valueColorNames[position];
                 break;
             case 3:
-                text = c.valueColorNames[position];
+                text = Colors.valueColorNames[position];
                 break;
             case 4:
-                text = c.multiplierColorNames[position];
+                text = Colors.multiplierColorNames[position];
                 break;
             case 5:
-                text = c.toleranceColorNames[position];
+                text = Colors.toleranceColorNames[position];
                 break;
             case 6:
-                text = c.coefficientColorNames[position];
+                text = Colors.coefficientColorNames[position];
                 break;
 
             default:
@@ -90,7 +90,7 @@ public class Resistor extends Fragment {
         //textView.setText("zobzari sa vysledok");
     }
 
-    private ArrayList<String> loadColor(int[] _colors) {
+    protected ArrayList<String> loadColor(int[] _colors) {
         ArrayList<String> colors = new ArrayList<>();
 
         for (int i = 0; i < _colors.length; i++) {
@@ -100,7 +100,7 @@ public class Resistor extends Fragment {
         return colors;
     }
 
-    public int choseColor(int band, Button button) {
+    public int choseColor(int band, Button button, View view) {
         int[] _color = {0};
 
         ColorPicker colorPicker = new ColorPicker(fa);
@@ -112,22 +112,22 @@ public class Resistor extends Fragment {
 
         switch (band) {
             case 1:
-                colorPicker.setColors(loadColor(c.valueBANDColor));
+                colorPicker.setColors(loadColor(Colors.valueBANDColor));
                 break;
             case 2:
-                colorPicker.setColors(loadColor(c.valueBANDColor));
+                colorPicker.setColors(loadColor(Colors.valueBANDColor));
                 break;
             case 3:
-                colorPicker.setColors(loadColor(c.valueBANDColor));
+                colorPicker.setColors(loadColor(Colors.valueBANDColor));
                 break;
             case 4:
-                colorPicker.setColors(loadColor(c.multiplierBANDColor));
+                colorPicker.setColors(loadColor(Colors.multiplierBANDColor));
                 break;
             case 5:
-                colorPicker.setColors(loadColor(c.toleranceBANDColor));
+                colorPicker.setColors(loadColor(Colors.toleranceBANDColor));
                 break;
             case 6:
-                colorPicker.setColors(loadColor(c.coefficientBANDColor));
+                colorPicker.setColors(loadColor(Colors.coefficientBANDColor));
                 break;
 
         }
@@ -136,6 +136,7 @@ public class Resistor extends Fragment {
             @Override
             public void setOnFastChooseColorListener(int position, int color) {
                 _color[0] = position;
+                view.setBackgroundColor(color);
 
                 setButtonText(button, band, position);
             }
@@ -147,11 +148,6 @@ public class Resistor extends Fragment {
         }).show();
 
         return _color[0];
-    }
-
-    public int[] hexToRgb(int colorCode) {
-        int[] color = {225, 12, 54};
-        return color;
     }
 
     public void refreshResistor(int band) {

@@ -18,4 +18,5 @@
     <string name="ok">ok</string>
 
     <string name="color_picker_title">Select color</string>
+    <string name="exit_text">Are you sure want to exit ?</string>
 </resources>

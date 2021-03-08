@@ -1,5 +1,6 @@
 package com.example.resistorcalculator;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
 
@@ -13,10 +14,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 
 import android.os.Handler;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 
@@ -25,6 +28,8 @@ import com.example.resistorcalculator.ui.main.*;
 public class MainActivity extends AppCompatActivity {
 
     boolean doubleBackToExitPressedOnce = false;
+
+    final Context c = this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,23 +50,35 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         if (doubleBackToExitPressedOnce) {
-            new AlertDialog.Builder(MainActivity.this)
-                    .setIcon(R.drawable.ic_baseline_exit_to_app_24)
-                    .setTitle(R.string.exit_title)
-                    .setMessage(R.string.exit_dialog)
-                    .setCancelable(false)
-                    .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) { }
-                    })
-                    .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            finish();
-                            System.exit(0);
-                        }
-                    })
-                    .show();
+            LayoutInflater layoutInflaterAndroid = LayoutInflater.from(c);
+            View mView = layoutInflaterAndroid.inflate(R.layout.exit_dialog, null);
+            AlertDialog.Builder alertDialogBuilderUserInput = new AlertDialog.Builder(c);
+            alertDialogBuilderUserInput.setView(mView);
+
+            AlertDialog alertDialogAndroid = alertDialogBuilderUserInput.create();
+
+            Button btnCancel = (Button) mView.findViewById(R.id.btnCancel);
+            Button btnOk = (Button) mView.findViewById(R.id.btnOk);
+
+            btnCancel.setOnClickListener(new View.OnClickListener() {
+
+                @Override
+                public void onClick(View view) {
+                    alertDialogAndroid.dismiss();
+                }
+            });
+
+            btnOk.setOnClickListener(new View.OnClickListener() {
+
+                @Override
+                public void onClick(View view) {
+                    finish();
+                    System.exit(1);
+                }
+            });
+
+            alertDialogAndroid.show();
+
         }
         this.doubleBackToExitPressedOnce = true;
 

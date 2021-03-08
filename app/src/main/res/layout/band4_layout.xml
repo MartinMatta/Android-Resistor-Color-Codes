@@ -10,10 +10,10 @@
 
 
     <LinearLayout
+        android:id="@+id/resistor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:background="#E6BF95"
         android:orientation="horizontal"
         android:scaleX="0.8"
         android:scaleY="0.8">
@@ -36,12 +36,12 @@
             tools:ignore="MissingConstraints" />
 
         <View
+            android:id="@+id/value1"
             android:layout_width="10sp"
             android:layout_height="73dp"
             android:layout_gravity="center"
-            android:background="#448AFF"
-            android:layout_weight="1"
-            tools:ignore="MissingConstraints" />
+            android:background="#64FFDA"
+            android:layout_weight="1" />
 
         <View
             android:layout_width="10sp"
@@ -52,6 +52,7 @@
             tools:ignore="MissingConstraints" />
 
         <View
+            android:id="@+id/value2"
             android:layout_width="10dp"
             android:layout_height="73dp"
             android:layout_gravity="center"
@@ -68,6 +69,7 @@
             tools:ignore="MissingConstraints" />
 
         <View
+            android:id="@+id/multiplier"
             android:layout_width="10dp"
             android:layout_height="73dp"
             android:layout_gravity="center"
@@ -124,6 +126,7 @@
             tools:ignore="MissingConstraints" />
 
         <View
+            android:id="@+id/tolerance"
             android:layout_width="10dp"
             android:layout_height="73dp"
             android:layout_gravity="center"

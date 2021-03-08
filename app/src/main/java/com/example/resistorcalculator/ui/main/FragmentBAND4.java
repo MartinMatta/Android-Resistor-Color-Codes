@@ -1,5 +1,6 @@
 package com.example.resistorcalculator.ui.main;
 
+import android.annotation.SuppressLint;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -19,6 +20,11 @@ import com.example.resistorcalculator.R;
 
 public class FragmentBAND4 extends Resistor {
 
+    private View value1;
+    private View value2;
+    private View multiplier;
+    private View tolerance;
+
     Button btn_value1;
     Button btn_value2;
     Button btn_multiplier;
@@ -33,6 +39,11 @@ public class FragmentBAND4 extends Resistor {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.band4_layout, container, false);
 
+        value1 = view.findViewById(R.id.value1);
+        value2 = view.findViewById(R.id.value2);
+        multiplier = view.findViewById(R.id.multiplier);
+        tolerance = view.findViewById(R.id.tolerance);
+
         textView = (TextView)view.findViewById(R.id.textView1);
 
         btn_value1 = (Button)view.findViewById(R.id.btn_band4_value1);
@@ -43,32 +54,33 @@ public class FragmentBAND4 extends Resistor {
         loadViewParameter(imageView, textView, getActivity(), 4);
 
         btn_value1.setOnClickListener(new View.OnClickListener(){
+            @SuppressLint("ResourceAsColor")
             @Override
             public void onClick(View view) {
-                putResult(4, c.toleranceBANDValue[5]);
-                choseColor(1, btn_value1);
+                putResult(4, Colors.toleranceBANDValue[5]);
+                choseColor(1, btn_value1, value1);
             }
         });
 
         btn_value2.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                choseColor(2, btn_value2);
-                putResult(1, 2.2f, c.valueBANDColor[5]);
+                choseColor(2, btn_value2, value2);
+                putResult(1, 2.2f, Colors.valueBANDColor[5]);
             }
         });
 
         btn_multiplier.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                choseColor(4,  btn_multiplier);
+                choseColor(4,  btn_multiplier, multiplier);
             }
         });
 
         btn_tolerance.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                choseColor(5, btn_tolerance);
+                choseColor(5, btn_tolerance, tolerance);
             }
         });
 

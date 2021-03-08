@@ -42,35 +42,35 @@ public class FragmentBAND5 extends Resistor {
             @Override
             public void onClick(View view) {
                 putResult(5, 5f);
-                choseColor(1, btn_value1);
+                //choseColor(1, btn_value1);
             }
         });
 
         btn_value2.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                choseColor(2, btn_value2);
+                //choseColor(2, btn_value2);
             }
         });
 
         btn_value3.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                choseColor(3, btn_value3);
+                //choseColor(3, btn_value3);
             }
         });
 
         btn_multiplier.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                choseColor(4, btn_multiplier);
+                //choseColor(4, btn_multiplier);
             }
         });
 
         btn_tolerance.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                choseColor(5, btn_tolerance);
+                //choseColor(5, btn_tolerance);
             }
         });
 
