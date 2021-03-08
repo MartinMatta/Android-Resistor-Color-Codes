@@ -29,6 +29,8 @@ android {
 }
 
 dependencies {
+    //noinspection GradleCompatible
+    implementation 'com.github.mmin18:flexlayout:1.2.7'
     implementation 'petrov.kristiyan:colorpicker-library:1.1.10'
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.google.android.material:material:1.2.1'
