@@ -50,7 +50,6 @@ public class FragmentBAND5 extends Resistor {
             @Override
             public void onClick(View view) {
                 choseColor(2, btn_value2);
-               // draw();
             }
         });
 
