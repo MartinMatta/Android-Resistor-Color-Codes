@@ -54,7 +54,6 @@ public class FragmentBAND4 extends Resistor {
         loadViewParameter(imageView, textView, getActivity(), 4);
 
         btn_value1.setOnClickListener(new View.OnClickListener(){
-            @SuppressLint("ResourceAsColor")
             @Override
             public void onClick(View view) {
                 putResult(4, Colors.toleranceBANDValue[5]);
