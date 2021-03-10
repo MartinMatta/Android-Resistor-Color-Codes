@@ -2,6 +2,7 @@ package com.example.resistorcalculator;
 
 import android.annotation.SuppressLint;
 import android.graphics.Color;
+import android.os.Build;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -15,6 +16,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 
@@ -26,10 +28,13 @@ public class Resistor extends Fragment {
 
     Colors c = new Colors();
 
+    float tolerance = 10f;
+
     ImageView imageView;
     TextView textView;
     FragmentActivity fa;
     int bandCount;
+
 
     public void loadViewParameter(ImageView _imageView,
                                   TextView _textView,
@@ -56,33 +61,46 @@ public class Resistor extends Fragment {
         textView.setText(value + "Ω  " + "±" + tolerance + "%");
     }
 
+
+    @RequiresApi(api = Build.VERSION_CODES.O)
     private void setButtonText(Button button, int band, int position) {
         String text;
+        int coef = 0;
+
+        String[] value = {"1", "2", "3"};
 
         switch (band) {
             case 1:
                 text = Colors.valueColorNames[position];
+                value[0] = String.valueOf(position);
                 break;
             case 2:
                 text = Colors.valueColorNames[position];
+                value[1] = String.valueOf(position);
                 break;
             case 3:
                 text = Colors.valueColorNames[position];
+                value[2] = String.valueOf(position);
                 break;
             case 4:
                 text = Colors.multiplierColorNames[position];
                 break;
             case 5:
                 text = Colors.toleranceColorNames[position];
+                tolerance = Colors.toleranceBANDValue[position];
                 break;
             case 6:
                 text = Colors.coefficientColorNames[position];
+                coef = Colors.coefficientBANDValue[position];
                 break;
 
             default:
                 throw new IllegalStateException("Unexpected value: " + band);
         }
         button.setText(text);
+
+        String a = String.join("", value[0], value[1]);
+        putResult(Integer.parseInt(a), tolerance);
     }
 
 

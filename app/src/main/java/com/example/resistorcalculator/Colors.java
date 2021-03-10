@@ -72,7 +72,7 @@ public class Colors {
             0.1f, 0.01f
     };
 
-    public static final Float[] toleranceBANDValue = {
+    public static final float[] toleranceBANDValue = {
             1f, 2f,
             0.5f, 0.25f,
             0.1f, 0.05f,

@@ -56,7 +56,6 @@ public class FragmentBAND4 extends Resistor {
         btn_value1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                putResult(4, Colors.toleranceBANDValue[5]);
                 choseColor(1, btn_value1, value1);
             }
         });
@@ -65,7 +64,7 @@ public class FragmentBAND4 extends Resistor {
             @Override
             public void onClick(View view) {
                 choseColor(2, btn_value2, value2);
-                putResult(1, 2.2f, Colors.valueBANDColor[5]);
+                putResult(1, 2);
             }
         });
 
@@ -86,3 +85,4 @@ public class FragmentBAND4 extends Resistor {
         return view;
     }
 }
+

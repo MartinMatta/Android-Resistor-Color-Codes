@@ -60,7 +60,6 @@ public class FragmentBAND6 extends Resistor {
         btn_value1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                putResult(6, 10f, c.coefficientBANDValue[2]);
                 choseColor(1, btn_value1, value1);
             }
         });
