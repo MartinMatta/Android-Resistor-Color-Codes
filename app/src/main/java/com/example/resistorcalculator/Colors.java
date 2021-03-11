@@ -19,6 +19,15 @@ public class Colors {
             "gold", "silver"
     };
 
+    public static final String[] multiplierColorValues = {
+            "Ω", "brown",
+            "red", "orange",
+            "yellow", "green",
+            "blue", "purple",
+            "gray", "white",
+            "gold", "silver"
+    };
+
     public static final String[] toleranceColorNames = {
             "brown", "red",
             "green", "blue",

@@ -35,6 +35,8 @@ public class Resistor extends Fragment {
     FragmentActivity fa;
     int bandCount;
 
+    private String[] value = {"", "", ""};
+
 
     public void loadViewParameter(ImageView _imageView,
                                   TextView _textView,
@@ -61,13 +63,40 @@ public class Resistor extends Fragment {
         textView.setText(value + "Ω  " + "±" + tolerance + "%");
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    private int joinNumber(String[] num) {
+
+        int value;
+
+        if (bandCount != 4) {
+            value = Integer.parseInt(
+                    String.join("", num[0], num[1], num[2])
+            );
+        } else {
+            value = Integer.parseInt(
+                    String.join("", num[0], num[1])
+            );
+        }
+        return value;
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    private int makeNumber(String[] num) {
+        int value = 0;
+
+        if (num[0] == "0") {//||
+            value = 0;
+        } else {
+            value = joinNumber(num);
+        }
+        return value;
+    }
+
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     private void setButtonText(Button button, int band, int position) {
         String text;
         int coef = 0;
-
-        String[] value = {"1", "2", "3"};
 
         switch (band) {
             case 1:
@@ -99,8 +128,7 @@ public class Resistor extends Fragment {
         }
         button.setText(text);
 
-        String a = String.join("", value[0], value[1]);
-        putResult(Integer.parseInt(a), tolerance);
+        putResult(makeNumber(value), tolerance);
     }
 
 
@@ -151,6 +179,7 @@ public class Resistor extends Fragment {
         }
 
         colorPicker.setOnFastChooseColorListener(new ColorPicker.OnFastChooseColorListener() {
+            @RequiresApi(api = Build.VERSION_CODES.O)
             @Override
             public void setOnFastChooseColorListener(int position, int color) {
                 _color[0] = position;
@@ -169,8 +198,6 @@ public class Resistor extends Fragment {
     }
 
     public void refreshResistor(int band) {
-        //choseColor(band); //vybrat farbu
-        draw(); //nakreslit zmenu na obrazok a vypisat vysledok
     }
 
 
