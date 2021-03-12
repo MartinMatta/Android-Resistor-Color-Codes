@@ -20,12 +20,21 @@ public class Colors {
     };
 
     public static final String[] multiplierColorValues = {
-            "Ω", "brown",
-            "red", "orange",
-            "yellow", "green",
-            "blue", "purple",
-            "gray", "white",
-            "gold", "silver"
+            "Ω", "Ω",
+            "Ω", "kΩ",
+            "kΩ", "KΩ",
+            "MΩ", "MΩ",
+            "MΩ", "GΩ",
+            "Ω", "Ω",
+    };
+
+    public static final float[] multiplierBANDValue = {
+            1f, 10f,
+            100f, 1f,
+            10f, 100f,
+            1f, 10f,
+            100f, 1f,
+            0.1f, 0.01f,
     };
 
     public static final String[] toleranceColorNames = {
@@ -72,14 +81,6 @@ public class Colors {
             0x2196F3, 0x7F00FF,
     };
 
-    public static final Float[] multiplierBANDValue = {
-            1f, 10f,
-            100f, 1000f,
-            10000f, 100000f,
-            1000000f, 10000000f,
-            100000000f, 1000000000f,
-            0.1f, 0.01f
-    };
 
     public static final float[] toleranceBANDValue = {
             1f, 2f,

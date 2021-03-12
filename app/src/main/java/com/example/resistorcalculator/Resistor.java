@@ -5,7 +5,6 @@ import android.graphics.Color;
 import android.os.Build;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
 
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -30,19 +29,19 @@ public class Resistor extends Fragment {
 
     float tolerance = 10f;
 
-    ImageView imageView;
     TextView textView;
     FragmentActivity fa;
     int bandCount;
 
+    private float multiplier = 1f;
+    private String flag = "Ω";
+
     private String[] value = {"", "", ""};
 
 
-    public void loadViewParameter(ImageView _imageView,
-                                  TextView _textView,
+    public void loadViewParameter(TextView _textView,
                                   FragmentActivity _fa,
                                   int _bandCount) {
-        imageView = _imageView;
         textView = _textView;
         fa = _fa;
         bandCount = _bandCount;
@@ -54,13 +53,13 @@ public class Resistor extends Fragment {
                           int coefficient) {
 
             textView.setText(
-                    value + "Ω  " + "±" + tolerance + "% " + coefficient + " ppm/°C"
+                    value + "Ω  " + " ±" + tolerance + "% " + coefficient + " ppm/°C"
             );
     }
 
     @SuppressLint("SetTextI18n")
-    public void putResult(int value, float tolerance) {
-        textView.setText(value + "Ω  " + "±" + tolerance + "%");
+    public void putResult(String value, float tolerance) {
+        textView.setText(value  + " ±" + tolerance + "%");
     }
 
     @RequiresApi(api = Build.VERSION_CODES.O)
@@ -98,6 +97,7 @@ public class Resistor extends Fragment {
         String text;
         int coef = 0;
 
+
         switch (band) {
             case 1:
                 text = Colors.valueColorNames[position];
@@ -113,6 +113,8 @@ public class Resistor extends Fragment {
                 break;
             case 4:
                 text = Colors.multiplierColorNames[position];
+                multiplier = Colors.multiplierBANDValue[position];
+                flag = Colors.multiplierColorValues[position];
                 break;
             case 5:
                 text = Colors.toleranceColorNames[position];
@@ -128,13 +130,16 @@ public class Resistor extends Fragment {
         }
         button.setText(text);
 
-        putResult(makeNumber(value), tolerance);
+        int n = makeNumber(value);
+        float out = n * multiplier;
+
+        if (out < 1) {
+            putResult(String.valueOf(out) + flag, tolerance);
+        } else {
+            putResult(String.valueOf((int)out) + flag, tolerance);
+        }
     }
 
-
-    public void draw() { //ImageView imageView, int band
-        //textView.setText("zobzari sa vysledok");
-    }
 
     protected ArrayList<String> loadColor(int[] _colors) {
         ArrayList<String> colors = new ArrayList<>();

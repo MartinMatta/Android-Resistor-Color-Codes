@@ -30,7 +30,6 @@ public class FragmentBAND6 extends Resistor {
     Button btn_tolerance;
     Button btn_coefficient;
 
-    ImageView imageView;
     TextView textView;
 
     Colors c = new Colors();
@@ -55,7 +54,7 @@ public class FragmentBAND6 extends Resistor {
         btn_tolerance = (Button)view.findViewById(R.id.btn_band6_tolerance);
         btn_coefficient = (Button)view.findViewById(R.id.btn_band6_coefficient);
 
-        loadViewParameter(imageView, textView, getActivity(), 6);
+        loadViewParameter(textView, getActivity(), 6);
 
         btn_value1.setOnClickListener(new View.OnClickListener(){
             @Override

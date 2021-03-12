@@ -26,7 +26,6 @@ public class FragmentBAND5 extends Resistor {
     Button btn_multiplier;
     Button btn_tolerance;
 
-    ImageView imageView;
     TextView textView;
 
 
@@ -48,12 +47,12 @@ public class FragmentBAND5 extends Resistor {
         btn_multiplier = (Button)view.findViewById(R.id.btn_band5_multiplier);
         btn_tolerance = (Button)view.findViewById(R.id.btn_band5_tolerance);
 
-        loadViewParameter(imageView, textView, getActivity(), 5);
+        loadViewParameter(textView, getActivity(), 5);
 
         btn_value1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                putResult(5, 4);
+                //putResult(5, 4);
                 choseColor(1, btn_value1, value1);
             }
         });
