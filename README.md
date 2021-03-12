@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img alt="resitor-color-calculator" src="img.png" width="200" height="200">
+  <img alt="resitor-color-calculator" src="/assets/img.png" width="200" height="200">
 </p>
 
 <h1 align="center">Resistor Color Calculator</h1>
